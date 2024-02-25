@@ -1,35 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>B9A5-Smart Ticketing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style type="text/tailwindcss">
+      p {
+        @apply text-gray-500;
+      }
+
+      .container {
+        @apply px-5 lg:px-0 lg:mx-auto max-w-screen-xl;
+      }
+    </style>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ["Raleway", "sans-serif"],
+              sans: ["Mulish", "sans-serif"],
             },
           },
         },
       };
     </script>
 
-    <script src="index.js"></script>
-
-    <style>
-      .banner {
-        background-image: url("images/banner.png");
-      }
-    </style>
+    <script
+      src="https://kit.fontawesome.com/818096cf08.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
-    <h1 class="text-4xl font-extrabold">Hello World</h1>
+    <!-- header section -->
+    <header
+      class="container mt-3 mb-5 lg:my-12 flex lg:justify-between items-center"
+    >
+      <label class="mr-4 lg:mr-0 lg:order-2">
+        <i class="fa-solid fa-bars text-xl lg:hidden"></i>
+        <input type="checkbox" class="hidden peer" />
+
+        <menu
+          class="py-10 lg:py-0 gap-y-6 justify-items-center hidden peer-checked:grid lg:flex items-center gap-x-11 font-medium text-black lg:text-gray-500 border-t fixed lg:static top-[4.5rem] inset-x-0 bg-white shadow-md lg:shadow-none lg:border-0 z-50"
+        >
+          <li class="hover:text-green-500"><a href=".">Home</a></li>
+          <li class="hover:text-green-500"><a href=".">About</a></li>
+          <li class="hover:text-green-500"><a href=".">Destination</a></li>
+          <li class="hover:text-green-500"><a href=".">Search</a></li>
+        </menu>
+      </label>
+
+      <h1 class="text-2xl lg:text-4xl lg:order-1 font-extrabold">E-Ticket</h1>
+
+      <div class="ml-auto lg:ml-0 flex items-center gap-x-6 lg:order-3">
+        <button
+          class="px-4 py-2 lg:px-6 lg:py-3 flex justify-center items-center gap-x-2 rounded-lg bg-green-50 border border-green-500"
+        >
+          <span class="text-green-500 font-medium">BUS</span>
+          <img src="images/bus-icon.png" alt="bus-icon" />
+        </button>
+      </div>
+    </header>
   </body>
 </html>
