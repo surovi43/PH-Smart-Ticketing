@@ -25,6 +25,14 @@
       .container {
         @apply px-5 lg:px-0 lg:mx-auto max-w-screen-xl;
       }
+
+      .grid-seat {
+        grid-template-columns: 1.75rem repeat(2, 6.875rem) 1fr repeat(
+            2,
+            6.875rem
+          );
+        grid-auto-rows: 3.5rem;
+      }
     </style>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -189,6 +197,224 @@
             See All Offers
           </button>
         </div>
+      </section>
+
+      <!-- P.H Paribahan -->
+      <section>
+        <div class="grid gap-y-6 mb-20">
+          <h1 class="font-bold text-5xl flex justify-center items-center">
+            E.Paribahan
+          </h1>
+
+          <p class="text-center max-w-screen-md mx-auto">
+            Discover seamless travel solutions in our Transportation section.
+            Your journey, simplified for maximum convenience.
+          </p>
+        </div>
+
+        <div class="flex w-full items-center">
+          <div class="w-full">
+            <div class="flex items-center justify-between">
+              <div class="flex gap-x-4 items-center">
+                <img src="images/bus-logo.png" alt="bus-logo" />
+
+                <div class="grid gap-y-1">
+                  <h2 class="font-bold text-3xl">Greenline Paribahan</h2>
+                  <p>Coach-009-WEB ! AC_Business</p>
+                </div>
+              </div>
+
+              <button
+                class="flex items-center gap-x-2 bg-green-50 text-green-500 rounded-xl px-4 py-3"
+              >
+                <img src="images/seat-green.png" alt="seat-green" />
+                <span> 40 Seats left </span>
+              </button>
+            </div>
+
+            <div class="grid gap-y-6 p-8 mt-6 bg-gray-100 rounded-3xl">
+              <div
+                class="pb-6 text-lg font-medium flex items-center justify-between border-b border-dashed border-neutral-400"
+              >
+                <p>Route</p>
+                <h1 class="text-neutral-800">Dhaka - Sylhet</h1>
+              </div>
+
+              <div
+                class="pb-6 text-lg font-medium flex items-center justify-between border-b border-dashed border-neutral-400"
+              >
+                <p>Departure Time</p>
+                <h1 class="text-neutral-800">9:00 PM</h1>
+              </div>
+
+              <div class="flex items-center gap-x-6 font-medium">
+                <div class="px-4 py-5 bg-gray-200 rounded-xl">
+                  Boarding Point - Laxmipur
+                </div>
+                <div class="px-4 py-5 bg-gray-200 rounded-xl">
+                  Dropping Point - Bogura
+                </div>
+                <div class="px-4 py-5 bg-gray-200 rounded-xl">
+                  Est. Time - 11 Hour
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <img
+            src="images/info-devider.png"
+            alt="info-devider"
+            class="ml-8 mr-6 h-full"
+          />
+
+          <div
+            class="flex-shrink-0 min-w-44 text-center grid justify-items-center content-center"
+          >
+            <img src="images/fare.png" alt="fare-icon" />
+            <h1 class="mt-6 mb-2 font-bold text-3xl">550 Taka</h1>
+            <p>Per Seat</p>
+          </div>
+        </div>
+
+        <section class="mt-14 grid grid-cols-12 gap-x-6">
+          <div class="pr-8 col-span-7 border-r border-dashed border-gray-400">
+            <h1 class="font-semibold text-2xl">Select Your Seat</h1>
+            <div
+              class="py-4 mt-6 flex justify-between border-y border-dashed border-gray-400"
+            >
+              <div class="flex items-center gap-x-2">
+                <img src="images/seat-gray.png" alt="seat-gray" />
+                <p>Available</p>
+              </div>
+
+              <div class="flex items-center gap-x-2">
+                <img
+                  src="images/seat-green-filled.png"
+                  alt="seat-green-filled"
+                />
+                <p>Selected</p>
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-x-8 gap-y-6 grid-seat font-medium">
+              <div
+                class="bg-gray-100 rounded-xl col-start-6 flex items-center justify-center"
+              >
+                <img src="images/steering-wheel.png" alt="steering-wheel" />
+              </div>
+
+              <h1 class="flex items-center">A</h1>
+              <button class="bg-gray-100 rounded-xl">A1</button>
+              <button class="bg-gray-100 rounded-xl">A2</button>
+              <div></div>
+              <button class="bg-gray-100 rounded-xl">A3</button>
+              <button class="bg-gray-100 rounded-xl">A4</button>
+            </div>
+          </div>
+
+          <div class="col-span-5">
+            <h1
+              class="pb-6 font-semibold text-2xl border-b border-dashed border-gray-400"
+            >
+              Total Fare
+            </h1>
+
+            <div class="mt-6 p-8 rounded-xl bg-gray-100 grid gap-y-4">
+              <div
+                class="pb-4 grid grid-cols-4 font-semibold border-b border-dashed border-gray-400"
+              >
+                <h1 class="flex items-center gap-x-1 col-span-2">
+                  Seat
+                  <span class="px-2 bg-green-500 text-white rounded-md text-sm">
+                    2
+                  </span>
+                </h1>
+                <h1>Class</h1>
+                <h1 class="text-right">Price</h1>
+              </div>
+
+              <div id="price-table" class="grid gap-y-4">
+                <div class="text-gray-400 font-normal grid grid-cols-4">
+                  <p class="col-span-2">C2</p>
+                  <p>Economoy</p>
+                  <p class="text-right">550</p>
+                </div>
+              </div>
+
+              <div
+                class="pt-4 flex justify-between font-semibold border-t border-gray-400"
+              >
+                <h1>Total Price</h1>
+                <h1>BDT 1100</h1>
+              </div>
+
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="Have any coupon? "
+                  class="bg-white rounded-xl h-14 px-5 w-full"
+                />
+
+                <button
+                  class="px-4 py-2 text-white font-semibold bg-green-500 rounded-lg absolute right-2 top-1/2 -translate-y-1/2"
+                >
+                  Apply
+                </button>
+              </div>
+
+              <div class="mt-2 flex justify-between font-semibold">
+                <h1>Grand Total</h1>
+                <h1>BDT 1100</h1>
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-y-6">
+              <div class="grid gap-y-4">
+                <label for="passenger-name" class="font-semibold">
+                  Passenger Name
+                </label>
+                <input
+                  id="passenger-name"
+                  type="text"
+                  name="passenger-name"
+                  placeholder="Enter your name"
+                  class="px-6 rounded-xl border border-gray-200 h-16"
+                />
+              </div>
+              <div class="grid gap-y-4">
+                <label for="phone-number" class="font-semibold">
+                  Phone Number*
+                </label>
+                <input
+                  id="phone-number"
+                  type="text"
+                  placeholder="Enter your phone number"
+                  class="px-6 rounded-xl border border-gray-200 h-16"
+                />
+              </div>
+              <div class="grid gap-y-4">
+                <label for="email" class="font-semibold">Email ID</label>
+                <input
+                  id="email"
+                  type="text"
+                  name="email"
+                  placeholder="Enter your email id"
+                  class="px-6 rounded-xl border border-gray-200 h-16"
+                />
+              </div>
+              <button
+                class="h-16 flex justify-center items-center bg-green-500 text-white font-bold text-xl rounded-xl"
+              >
+                Next
+              </button>
+
+              <div class="flex justify-center gap-x-10 text-gray-500 underline">
+                <a href=""> Terms and Conditions</a>
+                <a href="">Cancellation Policy</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
   </body>
